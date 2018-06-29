@@ -8,6 +8,8 @@ Uses the open/free api that ComEd publishes: https://hourlypricing.comed.com/api
 ![screenshot1](screenshot1.JPG)
 
 ## Using the module
+run git clone https://github.com/vincep5/MMM-ComEdPrice from inside your MagicMirror/modules folder
+
 Add `MMM-ComEdPrice` module to the `modules` array in the `config/config.js` file:
 ````javascript
 modules: [
