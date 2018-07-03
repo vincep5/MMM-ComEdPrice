@@ -38,20 +38,20 @@ Module.register("MMM-ComEdPrice", {
 
         if (this.result.length > 0){
             this.result.forEach(function(pwr) {
-                var symbolElement =  document.createElement("span");
+                var iconElement =  document.createElement("span");
                 var lastPrice = pwr.price;
                 var lastDate = pwr.millisUTC;
-
-                wrapper.appendChild(symbolElement);
 
                 var priceElement = document.createElement("span");
                 priceElement.innerHTML = lastPrice + ' &cent;';
 
                 if (lastPrice > 7) {
                     priceElement.className = "up";
+                    iconElement.className = "up fa fa-fw fa-arrow-up";
                 }
                 else {
                     priceElement.className = "down";
+                    iconElement.className = "down fa fa-fw fa-arrow-down";
                 }
 
                 var d = new Date(parseInt(lastDate, 10));
@@ -62,6 +62,7 @@ Module.register("MMM-ComEdPrice", {
                 var divider = document.createElement("span");                 
                 divider.innerHTML = ' - ';
 
+                wrapper.appendChild(iconElement);
                 wrapper.appendChild(priceElement);
                 wrapper.appendChild(divider);
                 wrapper.appendChild(dateElement);
