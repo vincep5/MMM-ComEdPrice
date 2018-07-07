@@ -33,9 +33,6 @@ Module.register("MMM-ComEdPrice", {
 
         wrapper.className = 'medium bright';
 
-        var count = 0;
-        var _this = this;
-
         if (this.result.length > 0){
             this.result.forEach(function(pwr) {
                 var iconElement =  document.createElement("span");
@@ -66,7 +63,6 @@ Module.register("MMM-ComEdPrice", {
                 wrapper.appendChild(priceElement);
                 wrapper.appendChild(divider);
                 wrapper.appendChild(dateElement);
-                count++;
             });
         }
 
