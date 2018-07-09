@@ -23,7 +23,7 @@ Module.register("MMM-ComEdPrice", {
 
     // Override dom generator.
     getDom: function() {
-        var wrapper = document.createElement("priceContent");
+        var wrapper = document.createElement("pricecontent");
 
         if (!this.loaded) {
             wrapper.innerHTML = this.translate("LOADING");
