@@ -13,11 +13,13 @@ module.exports = NodeHelper.create({
 
   getData: function (url) {
       var self = this;
-      console.log('requesting:' + url);
+      //console.log('requesting:' + url);
       request({ url: url, method: 'GET' }, function (error, response, body) {
           if (!error && response.statusCode == 200) {
               var result = JSON.parse(body);
               self.sendSocketNotification('POWER_DATA_RESULT', result);
+          } else {
+              console.log("MMM-ComEdPrice : Could not load data.");
           }
       });
   },
